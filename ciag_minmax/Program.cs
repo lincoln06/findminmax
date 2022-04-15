@@ -25,27 +25,40 @@ namespace ciag_minmax
             {
                 Console.Write($"{inputArray[j]} ");
             }
-            
+            inputArray=SortTable(inputArray);
             
             Console.ReadKey();
             int[] minMaxArray = FindMinMax(inputArray, arrLength);
-        }
-        static int[] FindMinMax(int[] inputArray, int arrLength)
-        {
-            int buffer = 0;
-            SortTable(inputArray); //sortowanie par w tabeli rosnąco
-            if (inputArray.Length == 2) return inputArray; //jeśli wyjściowa tabela ma 2 elementy, znaleźliśmy min i max
-            int outputArrLength = arrLength / 2; //wyjściowa tablica po każdej rekurencji będzie miała 2 razy mniej elementów
-            int[] outputArray = new int[outputArrLength];
-            for(int i=0;i<arrLength; i=i+2)
+            Console.WriteLine("\n");
+            for(int i=0;i<minMaxArray.Length;i++)
             {
-                
+                Console.Write($"{minMaxArray[i]} ");
             }
+            Console.ReadKey();
+        }
+        static int[] FindMinMax(int[] inputArray, int inputArrLength)
+        {
+            //sortowanie par w tabeli rosnąco
+            inputArray=SortTable(inputArray);
+            if (inputArrLength == 2) return inputArray;
+            
+            int outputArrIndex = 0;
+            int outputArrLength = inputArrLength / 2;
+            int[] outputArray = new int[outputArrLength];
+            for (int i=0;i<inputArrLength-4;i+=4)
+            {
+                if (inputArray[i] < inputArray[i + 2]) outputArray[outputArrIndex] = inputArray[i];
+                else outputArray[outputArrIndex] = inputArray[i + 2];
+                if (inputArray[i+1] > inputArray[i + 3]) outputArray[outputArrIndex+1] = inputArray[i+1];
+                else outputArray[outputArrIndex+1] = inputArray[i + 3];
+                outputArrIndex += 2;
+            }
+            return FindMinMax(outputArray, outputArray.Length);
         }
         static int[] SortTable(int[] inputArray)
         {
             int buffer = 0;
-            for(int i=0;i<inputArray.Length;i=i+2)
+            for(int i=0;i<inputArray.Length-1;i=i+2)
             {
                 if(inputArray[i]>inputArray[i+1])
                 {
