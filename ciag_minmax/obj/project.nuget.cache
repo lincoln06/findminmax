@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rcuoeiX5e7cyHJP3W/epQA1ix2zm2eaxTla+Uk/TdRcZkQf/FL8ujtgQ91zVP/OEompUbPl+F+DuFqpNaB1PcQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\macie\\source\\repos\\ciag_minmax\\ciag_minmax\\ciag_minmax.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\macie\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

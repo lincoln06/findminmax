@@ -1,0 +1,16 @@
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\bin\Debug\net5.0\ciag_minmax.exe
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\bin\Debug\net5.0\ciag_minmax.deps.json
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\bin\Debug\net5.0\ciag_minmax.runtimeconfig.json
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\bin\Debug\net5.0\ciag_minmax.runtimeconfig.dev.json
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\bin\Debug\net5.0\ciag_minmax.dll
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\bin\Debug\net5.0\ref\ciag_minmax.dll
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\bin\Debug\net5.0\ciag_minmax.pdb
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.csproj.AssemblyReference.cache
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.AssemblyInfoInputs.cache
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.AssemblyInfo.cs
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.csproj.CoreCompileInputs.cache
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.dll
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ref\ciag_minmax.dll
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.pdb
+C:\Users\macie\source\repos\ciag_minmax\ciag_minmax\obj\Debug\net5.0\ciag_minmax.genruntimeconfig.cache
