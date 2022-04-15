@@ -7,50 +7,22 @@ namespace ciag_minmax
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Jak długi będzie wprowadzony ciąg liczbowy?");
-            int length = int.Parse(Console.ReadLine());
-            int steps = 0;
-            if (length % 2 != 0)
+            Console.WriteLine("Ile elementów ma mieć ciąg liczbowy?");
+            int arrLength = int.Parse(Console.ReadLine());
+            int length = arrLength;
+            if (arrLength % 2 != 0) arrLength++;
+            int[] inputArray = new int[arrLength];
+            Random random = new Random();
+            for(int i=0;i<length; i++)
             {
-                steps = length;
-                length++;
+                inputArray[i] = random.Next(100);
             }
-            else steps = length;
-            int[] array = new int[length];
-            for(int i=0;i<steps;i++)
+            if (arrLength != length) inputArray[arrLength - 1] = inputArray[length - 1]; 
+            for(int j=0;j<arrLength;j++)
             {
-                Console.WriteLine($"Podaj {i} wyraz ciągu: ");
-                array[i] = int.Parse(Console.ReadLine());
-            }
-            if (steps < length) array[length-1] = array[steps-1];
-
-            Console.WriteLine("Wyświetlanie tablicy");
-            for(int j=0;j<length; j++)
-            {
-                Console.Write($"{array[j]} ");
+                Console.Write($"{inputArray[j]} ");
             }
             Console.ReadKey();
-            Console.WriteLine("\n\n");
-            int[] indexList = GroupTwoElements(array, length);
-            for(int k=0;k<indexList.Length;k++)
-            {
-                Console.WriteLine(indexList[k]);
-            }
-            Console.ReadKey();
-
         }
-        static int[] GroupTwoElements (int[] array, int length)
-        {
-            int index = 0;
-            length = length / 2;
-            int[] indexList = new int[length];
-            for(int i=0;i<length;i++)
-            {
-                indexList[i] = index;
-                index += 2;
-            }
-            return indexList;
-        }
-        
     }
 }
