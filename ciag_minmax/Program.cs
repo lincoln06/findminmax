@@ -7,7 +7,7 @@ namespace ciag_minmax
         static int numberOfFindOperations = 0;
         static void Main(string[] args)
         {
-            Console.WriteLine("How many elements?");
+            Console.WriteLine("Ile elementów?");
             int arrLength = int.Parse(Console.ReadLine());
             Random random = new Random();
             int[] inputArray = new int[arrLength];
