@@ -10,10 +10,17 @@ namespace ciag_minmax
             Console.WriteLine("Ile elementów?");
             int arrLength = int.Parse(Console.ReadLine());
             Random random = new Random();
+            Console.WriteLine($"Podaj największy możliwy wyraz. Minimum 2");
+            int size = int.Parse(Console.ReadLine());
+            while(size<2)
+            {
+                Console.WriteLine($"Zbyt mała liczba. Minimum to 2!");
+                size = int.Parse(Console.ReadLine());
+            }
             int[] inputArray = new int[arrLength];
             for (int i = 0; i < arrLength; i++)
             {
-                inputArray[i] = random.Next(300);
+                inputArray[i] = random.Next(size);
                 Console.Write($"{inputArray[i]}\t");
             }
             Console.WriteLine();
@@ -21,6 +28,7 @@ namespace ciag_minmax
             Console.ReadKey();
             int[] outputArray = FindMinMax(inputArray);
             Console.WriteLine($"Ilość porównań: {numberOfFindOperations}");
+            Console.WriteLine($"Złożoność obliczeniowa: O({(float)numberOfFindOperations/arrLength}n)");
             Console.WriteLine($"Element minimalny: {outputArray[0]}");
             Console.WriteLine($"Element maksymalny: {outputArray[1]}");
             Console.ReadKey();
@@ -30,8 +38,14 @@ namespace ciag_minmax
             inputArray = SortTable(inputArray);
             if (inputArray.Length == 2) return inputArray;
 
+            //Aby algorytm działał poprawnie, długość tablicy powinna być podzielna przez 4
+            //Jeżeli nie jest podzielna przez 4, metoda AddMoreElements dopełni ciąg
+            //i ustawi w brakujących indeksach wartości równe ostatniemu elementowi tablicy
             if (inputArray.Length % 4 != 0) inputArray = AddMoreElements(inputArray);
-            int[] outputArray = new int[inputArray.Length / 2];
+
+            //wyjściowa tablica do przekazania do następnej rekurencji będzie mieć zawsze 2x mniej elementów
+            int[] outputArray = new int[inputArray.Length / 2]; 
+
             int j = 0;
             for (int i = 0; i < inputArray.Length; i += 4)
             {
